@@ -2,7 +2,7 @@
 
 ## 13.06.2025
 
-* Due to a bug in partitura, symbolic time in the match files was incorrectly represented in quarters instead of beats. This bug affected the `Mozart_K331_1st-mov` and `Chopin_op38` files which have a time signature of 6/8. This issue was addressed with PR #4 in partitura.
+* Fixed score onset time of notes in match files for `Mozart_K331_1st-mov` and `Chopin_op38`. Due to a bug in partitura, symbolic score time in the match files was incorrectly represented in quarters instead of beats. This bug affected the `Mozart_K331_1st-mov` and `Chopin_op38` files which have a time signature of 6/8. This issue was addressed with [PR #454 in partitura](https://github.com/CPJKU/partitura/pull/454).
 
 ## 07.03.24
 
