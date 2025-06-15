@@ -24,7 +24,7 @@ The current version of the match files is supported by partitura versions >=1.2.
 
 ## Referencing this work
 
-The dataset was collected and compiled by . If you use this dataset, please cite it as follows:
+ If you use this dataset in your research, please cite it as follows:
 
 
 
