@@ -1,8 +1,10 @@
-# Vienna 4x22 Piano Corpus -- Match, MusicXML, and PDF files
+# Vienna 4x22 Piano Corpus
 
-This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MusicXML and PDF files of the corresponding scores.
+This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MusicXML and PDF files of the corresponding scores. The dataset was originally collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/goebl/) (see ).
 
-This repository was initially created for the Tutorial on Expressive Modeling of Music Performance presented at ISMIR 2019. Changes to the original data are specified in the [CHANGES.md](./CHANGES.md). The main differences of the data in this repository and the ones in the original repository involve mostly updating the version of the match files to the new version 1.0.0 and adding symbolic scores.
+This repository was initially created for as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. Changes to the original data are specified in the [CHANGES.md](./CHANGES.md). 
+
+The main differences of the files in this repository and the ones in the original repository involve updating the version of the match files to the new version 1.0.0 and adding symbolic scores.
 
 The `id` attributes of the `note` elements in the MusicXML files corresponds to the `Anchor` fields in the `snote` elements in the match files.
 
@@ -22,7 +24,7 @@ The current version of the match files is supported by partitura versions >=1.2.
 
 ## Referencing this work
 
-The dataset was collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/goebl/). If you use this work please cite.
+The dataset was collected and compiled by . If you use this dataset, please cite it as follows:
 
 
 
@@ -39,6 +41,8 @@ The dataset was collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/g
 }
 ```
 
-## LICENSE
+## License
 
-The files are distributed under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
+The contents of this repository are based on the official Vienna 4x22 dataset by Werner Goebl, available at [http://dx.doi.org/10.21939/4X22](http://dx.doi.org/10.21939/4X22), and used under the Creative Commons Attribution 4.0 International License (CC BY 4.0): <https://creativecommons.org/licenses/by/4.0/>
+
+Updates (described in CHANGES.md) have been made by members of the Institute of Computational Perception. These changes are also distributed under the terms of the CC BY 4.0 license.
