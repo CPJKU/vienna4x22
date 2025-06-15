@@ -1,6 +1,6 @@
 # Vienna 4x22 Piano Corpus
 
-This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MusicXML and PDF files of the corresponding scores. The dataset was originally collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/goebl/) (see ).
+This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MusicXML and PDF files of the corresponding scores. The dataset was originally collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/goebl/).
 
 This repository was initially created for as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. Changes to the original data are specified in the [CHANGES.md](./CHANGES.md). 
 
