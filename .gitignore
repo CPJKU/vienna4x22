@@ -1,13 +1,13 @@
 .DS_Store
-changes.txt
 match_old*
 match_orig
 midi_orig
 *~
 __pycache__
 *.py[cod]
-dev/to_match_v100.py
 dev/
 .vscode/
 audio/*.wav
+match_original_files
+
 
