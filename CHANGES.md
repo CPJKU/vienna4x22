@@ -6,9 +6,9 @@
 
 ## 07.03.24
 
-* Update starting time of MIDI and and Matchfiles to start with the audio files. This was done automatically by shifting the note onset/offset times and MIDI controls (pedals).
+* Update starting time of MIDI and and Matchfiles to start with the audio files. This was done automatically by shifting the note onset/offset times and MIDI controls (pedals) using the (`shift_files_to_audio.py`) script.
 
-* Add script to setup the audio files.
+* Add script to setup the audio files (`setup_audio.py`).
 
 ## 14.06.23
 
@@ -36,27 +36,35 @@ ph, 14.06.23
 
 ## 01.12.2022
 
-* Update Match files to version 1.0.0.
+* Updated match files to version 1.0.0 using the script `to_match_v100.py`.
 
 ## 03.02.2022
 
-* Add MIDI files from the original repository for convenience.
+* Added MIDI files from the original repository for convenience.
 
 ## 04.11.2019
 
-This repository was created for the tutorial on Expressive Music Performance presented at ISMIR. It includes a slightly modified version of the original Matchfiles (changes documented below). The alignments themselves where not modified. The match files were updated to include pedal information, similar to those in the Magaloff dataset (a proprietary dataset).
+### History and Scope
 
-* The repository only includes match files, MusicXML files and image files. This repository **does not include the audio files**.
+* This repository was created by Maarten Grachten and Carlos Cancino-Chacón as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. It includes a slightly modified version of the original match files (changes documented below). The alignments themselves were not modified. The match files were updated to include pedal information, similar to those in the Magaloff and Zeilinger dataset (a proprietary dataset available at the Institute of Computational Perception at JKU Linz).
+
+* The initial contents of this repository only included match files, MusicXML files and image files, but no MIDI or audio files.
 
 ### Changes
 
-* **MusicXML files**. The original dataset does not include symbolic scores in MusicXML format. Instead, the score information is entirely represented in the Match files. We created the MusicXML files from the score information in the original Match files using partitura version 0.2.0. We decided to go this route instead of getting MusicXML files from other sources, since that would have required matching the notes in the. The trade-off is that information like beaming, etc. is missing.
+* **MusicXML files**. The original dataset does not include symbolic scores in MusicXML format. Instead, the score information was entirely contained in the Match files. We created the MusicXML files from the score information in the original Match files using partitura version 0.2.0. We decided to go this route instead of getting MusicXML files from other sources, since that would have required basically to re-align the performances with the scores.
 
   * Dynamics markings, legato slurs, etc. were added manually on the MusicXML files directly.
   * Minimal correction of the stem directions and ensuring the order of attributes in the MusicXML file were done using the `move_stems.sh` and `fix_xml_note_attributes.py` scripts.
 
-* **Fixing formatting of note ids**. For Mozart and Schubert files, the note IDs were updated to start with `n` (e.g., `1` -> `n1`). This change was done to be consistent with the Magaloff and Zeilinger Datasets
+* **Unifying match file version**. In the original dataset, `Chopin_op10_no3` and `Chopin_op38` files are in the original match file version 1, while `Mozart_K331_1st-mov` and `Schubert_D783_no15` are version 5. Note however that the version 5 files in this dataset do not include pedal information that is available in other version 5 files (in the Magaloff and Zeilinger datasets). All files were converted to the same match file version.
 
-* **Add images of the scores** Add png and pdf images of the scores (necessary for the visualizations in the Jupyter notebooks in the ISMIR 2019 tutorial).
+* **Fixing/Adding sound off information**. The original `Chopin_op10_no3` and `Chopin_op38` version 1 match files did not include sound off information (i.e., implied note duration taking into account performed pedal). The original `Mozart_K331_1st-mov` and `Schubert_D783_no15` in version 5 have incorrect sound off information (the sound off in the files is identical to the note off). The new version adds the missing sound off to the `Chopin_op10_no3` and `Chopin_op38` files, and corrects the information for `Mozart_K331_1st-mov` and `Schubert_D783_no15`.
 
-* **Add pedal information**. To be consistent with Match file format 5.0, add pedal information to the match files.
+* **Unifying formatting of note ids**. For `Mozart_K331_1st-mov` and `Schubert_D783_no15` match files files, the note IDs were updated to start with `n` (e.g., `1` -> `n1`). This makes the IDs in the matchfile consistent with the IDs in the created MusicXML files.
+
+* **Add images of the scores**. Added png and pdf images of the scores (necessary for the visualizations in the Jupyter notebooks in the ISMIR 2019 tutorial). Images were taken from scores in the public domain available on IMSLP.
+
+* **Pedal information**. To be consistent with the match files in the Magaloff and Zeilinger datasets, pedal information was added to the matchfiles. The pedal information was taken from the MIDI files.
+
+* **Removed redundant Meta lines** for `Mozart_K331_1st-mov` and `Schubert_D783_no15` encoding time signature and key signature information (information already contained in the info lines at the beginning).
