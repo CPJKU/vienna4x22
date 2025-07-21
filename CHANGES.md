@@ -15,7 +15,7 @@
 ### Bugs
 
 * B1. incorrect clock_unit property (4000, should be 480)
-* B2. for Chopin_op38: last performed midi note missing in all match files except for last one (in last performance, last four notes are ommitted)
+* B2. for Chopin_op38: last performed midi note missing in all match files except for last one (in last performance, last four notes are omitted)
 * B3. for Chopin_op10_no3: voice-overlap score notes are missing in match files (those notes should get a new id, and should be aligned as deletions with score attribution 'voice_overlap')
 * B4. Missing MIDI performance notes in match file:
   * for Chopin_op38: each MIDI performance has notes (except for the last one addressed in B2) that are missing in alignment. Similarly most match alignments have score notes marked as deletions
@@ -46,7 +46,9 @@ ph, 14.06.23
 
 ### History and Scope
 
-* This repository was created by Maarten Grachten and Carlos Cancino-Chacón as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. It includes a slightly modified version of the original match files (changes documented below). The alignments themselves were not modified. The match files were updated to include pedal information, similar to those in the Magaloff and Zeilinger dataset (a proprietary dataset available at the Institute of Computational Perception at JKU Linz).
+* This repository was created by Maarten Grachten and Carlos Cancino-Chacón as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. 
+
+* The original version of the data in this repository included a slightly modified version of the original match files (changes documented below). The score-to-performance alignments themselves were not modified. The match files were updated to include pedal information, similar to those in the Magaloff and Zeilinger dataset (private datasets available at the Institute of Computational Perception at JKU Linz).
 
 * The initial contents of this repository only included match files, MusicXML files and image files, but no MIDI or audio files.
 
