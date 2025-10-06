@@ -1,12 +1,10 @@
 # Vienna 4x22 Piano Corpus
 
-This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MusicXML and PDF files of the corresponding scores. The dataset was originally collected and compiled by [Werner Goebl](https://iwk.mdw.ac.at/goebl/).
+This repository contains the version 1.0.0 match files of the [Vienna 4x22 Piano Corpus](http://dx.doi.org/10.21939/4X22) as well as MIDI, MusicXML and PDF files of the corresponding scores. The Vienna 4x22 dataset was collected by [Werner Goebl](https://iwk.mdw.ac.at/goebl/).
 
-This repository was initially created for as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. Changes to the original data are specified in the [CHANGES.md](./CHANGES.md). 
+This repository was initially created for as part of the materials for the tutorial on [Computational Modeling of Musical Expression: Perspectives, Datasets, Analysis and Generation](https://ismir2019.ewi.tudelft.nl/index2547.html?q=tutorials) at ISMIR 2019. Changes to the original data are specified in the [CHANGES.md](./CHANGES.md).
 
 The main differences of the files in this repository and the ones in the original repository involve updating the version of the match files to the new version 1.0.0 and adding symbolic scores.
-
-The `id` attributes of the `note` elements in the MusicXML files corresponds to the `Anchor` fields in the `snote` elements in the match files.
 
 ## Contents
 
@@ -22,11 +20,14 @@ This dataset includes 22 performances by professional pianists of 4 classical mu
 To use the dataset in python we recommend the [partitura package](github.com/CPJKU/partitura).
 The current version of the match files is supported by partitura versions >=1.2.0
 
+```python
+import partitura as pt
+
+```
+
 ## Referencing this work
 
  If you use this dataset in your research, please cite it as follows:
-
-
 
 ```bibtex
 @ELECTRONIC{vienna4x22,

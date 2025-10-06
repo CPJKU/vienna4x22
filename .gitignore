@@ -8,6 +8,5 @@ __pycache__
 dev/
 .vscode/
 audio/*.wav
-match_original_files
-
+original_files/
 
